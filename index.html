@@ -250,7 +250,7 @@
         var t1 = Date.UTC(todayYear, 1, 22, 0, 00, 00)
         var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond)
         var diff = t1 - t2
-        var diff2 = t2-t1
+        var diff2 = t2 - t1
         var diffYears = Math.floor(diff / years)
         var diffDays = Math.floor((diff / days) - diffYears * 365)
         var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours)
@@ -262,6 +262,7 @@
         var diff2Hours = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days) / hours)
         var diff2Minutes = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours) / minutes)
         var diff2Seconds = Math.floor((diff2 - (diff2Years * 365 + diff2Days) * days - diff2Hours * hours - diff2Minutes *
+            minutes) / seconds)
         if(todayMonth==1 && todayDate==22){
                 document.getElementById("text1").innerHTML =  "现在是1月22日,祝你"+todayYear+"新年快乐！"
         }else{
